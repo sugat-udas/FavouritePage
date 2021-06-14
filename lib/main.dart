@@ -1,3 +1,4 @@
+import 'package:favourite_page/favoriteController.dart';
 import 'package:favourite_page/favouriteListContainer.dart';
 import 'package:favourite_page/favouritePage.dart';
 import 'package:flutter/material.dart';
@@ -31,6 +32,7 @@ class MyApp extends StatelessWidget {
 }
 
 class MyHomePage extends StatelessWidget {
+  Food _food=new Food();
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -50,6 +52,8 @@ class MyHomePage extends StatelessWidget {
             ],
           ),
           onPressed: (){
+           // print(_food.name[1].toString());
+
             Navigator.push(context, MaterialPageRoute(builder: (context) =>FavouritePage(),));
           },
         )
